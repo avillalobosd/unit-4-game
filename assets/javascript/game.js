@@ -1,9 +1,10 @@
 
 
-$(".botones").click(function () {
-   
-    console.log("Funciona");
-    $(".titulodb").hide();
+$(".BotonStart").click(function () {
+
+    $(".BotonStart").hide();
+    $(".tituloSelect").css("visibility", "visible");
+
     
 
 
