@@ -1,0 +1,12 @@
+body {
+    background-image: url(../images/plataforma.jpg);
+    background-size:100%;
+  
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+
+}
