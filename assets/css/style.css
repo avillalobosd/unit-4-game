@@ -1,12 +1,12 @@
 body {
     background-image: url(../images/plataforma.png);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .padre {
    
-    margin: 1rem;
-    padding: 5rem;
+
     text-align: center;
   }
 
@@ -20,22 +20,72 @@ body {
 
 }
 
-.margensuperior{
 
-    height: 150px;
-}
+
+.titulo{
+    visibility: hidden;}
+
 
 .tituloSelect{
     visibility: hidden;
     text-align: center;
-    background-color: black;
+    background: black;
+
     color:white;
     font-weight: bolder;
     font-size: 30px;
     padding-bottom:30px;
+  
 }
 
 .personajeIntro{
     height:186px;
     padding-left: 20px;
+
 }
+
+.player1 {
+float:right;
+height:150px;
+visibility: hidden;
+position: absolute;
+
+}
+
+.player2 {
+    float:left;
+    height:150px;
+    visibility: hidden;
+    position: absolute;
+    
+    }
+
+.gokup1 {
+    float:right;
+    height:150px;
+    visibility: hidden;
+    
+    }
+
+
+.t1, .t3, .t2 {
+   background-color:black;
+   color:white;
+   font-weight: bold;
+   vertical-align: middle;
+   border: solid 3px black;
+   
+    }
+.d3, .n1, .n3, .d1, .n2, .d2,.a1,.a2, .statust{
+    background-color:white;
+    color:black;
+    font-weight: bold;
+    vertical-align: middle;
+    border: solid 3px black;
+        
+    }
+
+.hide{
+display:none;
+}
+

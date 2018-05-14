@@ -9,46 +9,177 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
 
-    <title>RPG GAME</title>
+
+
+    <title>DB CARD GAME</title>
 </head>
 
 <body>
-        
+
+
+<div class="hide">
+
+    <div class="row score" style="margin-top:100px; text-align:center;">
+
+        <div class="col-1 offset-3 t1">
+            <p class="t1t">CPU</p>
         </div>
-        <div class="row arribablanco">
-                <div class="col-12 margensuperior">
-                    <p></p>
+        <div class="col-1 t2">
+            <p class="t2t">Attack</p>
+        </div>
+        <div class="col-1 t3">
+            <p class="t3t">Life Left</p>
+        </div>
+        <div class="col-3 t2 tatus">
+            <p class="t3t">Status</p>
+        </div>
+
+    </div>
+    <div class="row score" style="text-align:center;">
+        <div class="offset-3 col-1 n2">
+            <p class="n1t">0</p>
+        </div>
+        <div class="col-1 a2">
+            <p class="a1t">0</p>
+        </div>
+        <div class="col-1 d2">
+            <p class="d1t">0</p>
+        </div>
+        <div class="col-3 statust">
+            <p class="statusc1 s1t" style="font-size: 100%;">Click to Chose!</p>
+        </div>
+
+    </div>
+
+    <div class="row score" style="text-align:center;">
+        <div class="offset-3 col-1 n2">
+            <p class="n2t">0</p>
+        </div>
+        <div class="col-1 a2">
+            <p class="a2t">0</p>
+        </div>
+        <div class="col-1 d2">
+            <p class="d2t">0</p>
+        </div>
+        <div class="col-3 statust">
+            <p class="statusc1 s2t">Click to Chose!</p>
+        </div>
+
+    </div>
+
+    <div class="row score" style="text-align:center;">
+        <div class="offset-3 col-1 n2">
+            <p class="n3t">0</p>
+        </div>
+        <div class="col-1 a2">
+            <p class="a3t">0</p>
+        </div>
+        <div class="col-1 d2">
+            <p class="d3t">0</p>
+        </div>
+        <div class="col-3 statust">
+            <p class="statusc1 s3t">Click to Chose!</p>
+        </div>
+
+    </div>
+    <div class="row score" style="text-align:center;">
+        <div class="offset-3 col-1 n2">
+            <p class="n4t">0</p>
+        </div>
+        <div class="col-1 a2">
+            <p class="a4t">0</p>
+        </div>
+        <div class="col-1 d2">
+            <p class="d4t">0</p>
+        </div>
+        <div class="col-3 statust">
+            <p class="statusc1 s4t">Click to Chose!</p>
+        </div>
+
+    </div>
+
+    <div class="row score" style="text-align:center;">
+        <div class="offset-3 col-6 n2">
+            <p class="instructions">0</p>
+        </div>
+
+
+    </div>
+    <div class="col-2 offset-5">
+
+        <button class="btn btn-primary btn-lg attackbtn" style="width:100%;">Attack</button>
+    </div>
+    
+</div>
+
+
+
+
+
+    <div class="row titulo titulosuperior">
+        <div class="offset-3 col-6 tituloSelect">
+            <p>Select One Character</br>Remember that 3 Ramaining Characters will be your opponents</p>
+        </div>
+    </div>
+    <div class="row titulo">
+        <div class="offset-3 col-6 tituloSelect">
+            <div class="row">
+                <div class="col-3">
+                    <img class="personajeIntro gokuintro" src="assets\images/goku.jpg">
                 </div>
-        </div>
-        <div class="row titulo">
-                <div class="offset-3 col-6 tituloSelect">
-                    <p>Select One Character</br>Remember that 3 Ramaining Characters will be your opponents</p>
-                </div>
-        </div>
-        <div class="row titulo">
-                <div class="offset-3 col-6 tituloSelect">
-                    <img class="gokuintro personajeIntro" src="assets\images/goku.jpg">
+                <div class="col-3">
                     <img class="freezerintro personajeIntro" src="assets\images/freezer.jpg">
+                </div>
+                <div class="col-3">
                     <img class="yamshaintro personajeIntro" src="assets\images/yamsha.jpg">
+                </div>
+                <div class="col-3">
                     <img class="piccolointro personajeIntro" src="assets\images/piccolo.png">
                 </div>
-        </div>
 
-        <div class="row botoninicio">
+            </div>
+        </div>
+    </div>
+
+    <div style="visibility:hidden" class="row titulo">
+        <div "visibility:hidden" class="col-12 player1">
+            <div class="row">
+
+                <div class="offset-4 col-2 jugador1">
+                    <img class="personajeIntro gokup1 player1" src="assets\images/goku.jpg">
+                    <img class="freezerp1 personajeIntro player1" src="assets\images/freezer.jpg">
+                    <img class="yamshap1 personajeIntro player1" src="assets\images/yamsha.jpg">
+                    <img class="piccolop1 personajeIntro player1" src="assets\images/piccolo.png">
+                    </br>
+                </div>
+
+                <div class="col-2 offset-1 jugador2">
+                    <img class="personajeIntro gokup2 player2" src="assets\images/goku.jpg">
+                    <img class="freezerp2 personajeIntro player2" src="assets\images/freezer.jpg">
+                    <img class="yamshap2 personajeIntro player2" src="assets\images/yamsha.jpg">
+                    <img class="piccolop2 personajeIntro player2" src="assets\images/piccolo.png">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row botoninicio">
         <div class="col-12 padre">
-                    <button type="button" class="btn btn-primary btn-lg BotonStart">Inicia Juego</button>
+            <button type="button" class="btn btn-primary btn-lg BotonStart">START GAME</button>
         </div>
 
     </div>
 
     <div class="row">
-        
+
     </div>
 
     <div class="row">
-       
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
