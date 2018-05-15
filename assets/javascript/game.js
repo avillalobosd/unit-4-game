@@ -48,7 +48,7 @@ function llenado() {
     $(".n4t").text(yamsha.name);
     $(".a4t").text(yamsha.attack);
     $(".d4t").text(yamsha.defense);
-    $(".instructions").text("Chose your First Oponent");
+    $(".instructions").text("Choose your First Oponent");
 
 }
 
@@ -121,7 +121,7 @@ $(".yamshaintro").click(function () {
 $(".statust1").click(function () {
     if (paso == 1) {
         if (player1 == "Goku") {
-            $(".instructions").text("You Can´t Chose your Own Character as Oponent, please chose other.");
+            $(".instructions").text("You Can´t Choose your Own Character as Oponent, please choose other.");
         } else {
             $(".gokup2").css("visibility", "visible");
             $(".attackbtn").css("visibility", "visible");
@@ -143,12 +143,59 @@ $(".statust1").click(function () {
         }
 
     }
+    if (paso == 3) {
+        if (player1 == "Goku") {
+            $(".instructions").text("You Can´t Choose your Own Character as Oponent, please choose other.");
+        } else if (vs.oponent1=="Goku"){
+            $(".instructions").text("You already Fight Against this oponent, please chose other");
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Yamsha";
+            $(".attackbtn").css("visibility", "visible");
+            $(".z1t").text("FIGHTING!");
+            $(".statust1").css("background-color", "yellow");
+            $(".z4t").text("Waiting..");
+            $(".instructions").text("Click Attack Button");
+            paso++;
+
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Piccolo";
+            $(".gokup2").css("visibility", "visible");
+    
+        }else if (player1=="Yamsha" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Freezer";
+            $(".gokup2").css("visibility", "visible");
+    
+        } else if (player1=="Yamsha" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Piccolo";
+            $(".gokup2").css("visibility", "visible");
+    
+        }else if (player1=="Piccolo" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Yamsha";
+            $(".gokup2").css("visibility", "visible");
+    
+        } else if (player1=="Piccolo" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Goku";
+            vs.oponent3=="Piccolo";
+            $(".gokup2").css("visibility", "visible");
+    
+        }
+
+    }
+
+
 
 });
 $(".statust2").click(function () {
     if (paso == 1) {
         if (player1 == "Freezer") {
-            $(".instructions").text("You Can't Chose your Own Character as Oponent, please chose other.");
+            $(".instructions").text("You Can't Choose your Own Character as Oponent, please choose other.");
         } else {
             $(".freezerp2").css("visibility", "visible");
             $(".attackbtn").css("visibility", "visible");
@@ -169,12 +216,51 @@ $(".statust2").click(function () {
             paso++;
         }
     }
+    if (paso == 3) {
+        if (player1 == "Freezer") {
+            $(".instructions").text("You Can´t Choose your Own Character as Oponent, please choose other.");
+        } else if (vs.oponent1=="Freezer"){
+            $(".instructions").text("You already Fight Against this oponent, please chose other");
+    
+        } else if (player1=="Goku" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Yamsha";
+            $(".freezerp2").css("visibility", "visible");
+    
+        } else if (player1=="Goku" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Piccolo";
+            $(".freezerp2").css("visibility", "visible");
+    
+        }else if (player1=="Yamsha" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Goku";
+            $(".freezerp2").css("visibility", "visible");
+    
+        } else if (player1=="Yamsha" && vs.oponent1=="Goku"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Piccolo";
+            $(".freezerp2").css("visibility", "visible");
+    
+        }else if (player1=="Piccolo" && vs.oponent1=="Goku"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Yamsha";
+            $(".freezerp2").css("visibility", "visible");
+    
+        } else if (player1=="Piccolo" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Freezer";
+            vs.oponent3=="Goku";
+            $(".freezerp2").css("visibility", "visible");
+    
+        }
+
+    }
 
 });
 $(".statust3").click(function () {
     if (paso == 1) {
         if (player1 == "Piccolo") {
-            $(".instructions").text("You Can't Chose your Own Character as Oponent, please chose other.");
+            $(".instructions").text("You Can't Choose your Own Character as Oponent, please choose other.");
 
         } else {
             $(".piccolop2").css("visibility", "visible");
@@ -196,12 +282,51 @@ $(".statust3").click(function () {
             paso++;
         }
     }
+    if (paso == 3) {
+        if (player1 == "Piccolo") {
+            $(".instructions").text("You Can´t Choose your Own Character as Oponent, please choose other.");
+        } else if (vs.oponent1=="Piccolo"){
+            $(".instructions").text("You already Fight Against this oponent, please chose other");
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Goku"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Yamsha";
+            $(".piccolop2").css("visibility", "visible");
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Goku";
+            $(".piccolop2").css("visibility", "visible");
+    
+        }else if (player1=="Yamsha" && vs.oponent1=="Goku"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Freezer";
+            $(".piccolop2").css("visibility", "visible");
+    
+        } else if (player1=="Yamsha" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Goku";
+            $(".piccolop2").css("visibility", "visible");
+    
+        }else if (player1=="Goku" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Yamsha";
+            $(".piccolop2").css("visibility", "visible");
+    
+        } else if (player1=="Goku" && vs.oponent1=="Yamsha"){
+            vs.oponent2=="Piccolo";
+            vs.oponent3=="Freezer";
+            $(".piccolop2").css("visibility", "visible");
+    
+        }
+
+    }
 
 });
 $(".statust4").click(function () {
     if (paso == 1) {
         if (player1 == "Yamsha") {
-            $(".instructions").text("You Can't Chose your Own Character as Oponent, please chose other.");
+            $(".instructions").text("You Can't Choose your Own Character as Oponent, please choose other.");
 
         } else {
             $(".yamshap2").css("visibility", "visible");
@@ -223,6 +348,45 @@ $(".statust4").click(function () {
             paso++;
         }
     }
+    if (paso == 3) {
+        if (player1 == "Yamsha") {
+            $(".instructions").text("You Can´t Choose your Own Character as Oponent, please choose other.");
+        } else if (vs.oponent1=="Yamsha"){
+            $(".instructions").text("You already Fight Against this oponent, please chose other");
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Goku";
+            $(".yamshap2").css("visibility", "visible");
+    
+        } else if (player1=="Freezer" && vs.oponent1=="Goku"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Piccolo";
+            $(".yamshap2").css("visibility", "visible");
+    
+        }else if (player1=="Goku" && vs.oponent1=="Piccolo"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Freezer";
+            $(".yamshap2").css("visibility", "visible");
+    
+        } else if (player1=="Goku" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Piccolo";
+            $(".yamshap2").css("visibility", "visible");
+    
+        }else if (player1=="Piccolo" && vs.oponent1=="Freezer"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Goku";
+            $(".yamshap2").css("visibility", "visible");
+    
+        } else if (player1=="Piccolo" && vs.oponent1=="Goku"){
+            vs.oponent2=="Yamsha";
+            vs.oponent3=="Freezer";
+            $(".yamshap2").css("visibility", "visible");
+    
+        }
+
+    }
 
 });
 
@@ -240,9 +404,13 @@ $(".attackbtn").click(function () {
                 $(".a1t").text(goku.attack);
                 $(".d2t").text(freezer.defense);
                 if (freezer.defense <= 0) {
-                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Freezer!");
+                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Freezer! Select Second Opponent");
+                    $(".freezerp2").css("visibility","hidden");
                     $(".z2t").text("Defeated..!");
                     $(".statust2").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z3t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     goku.defense = goku.defense - freezer.attack;
@@ -251,6 +419,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d1t").text(goku.defense);
                         $(".statust1").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -266,9 +435,13 @@ $(".attackbtn").click(function () {
                 $(".a1t").text(goku.attack);
                 $(".d3t").text(piccolo.defense);
                 if (piccolo.defense <= 0) {
-                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Piccolo!");
+                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Piccolo! Select Second Opponent");
+                    $(".piccolop2").css("visibility","hidden");
                     $(".z3t").text("Defeated..!");
                     $(".statust3").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z2t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     goku.defense = goku.defense - piccolo.attack;
@@ -277,6 +450,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d1t").text(goku.defense);
                         $(".statust1").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -291,10 +465,14 @@ $(".attackbtn").click(function () {
                 goku.attack = goku.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a1t").text(goku.attack);
                 $(".d4t").text(yamsha.defense);
-                if (yamsha.defense < 0) {
-                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Yamsha!");
+                if (yamsha.defense <= 0) {
+                    $(".instructions").text("Goku Attack Increase to: " + goku.attack + " and You just Defeat Yamsha! Select Second Opponent");
+                    $(".yamshap2").css("visibility","hidden");
                     $(".z4t").text("Defeated..!");
                     $(".statust4").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z2t").text("Click here to choose!");
+                    $(".z3t").text("Click here to choose!");
                     paso++;
                 } else {
                     goku.defense = goku.defense - yamsha.attack;
@@ -303,6 +481,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d1t").text(goku.defense);
                         $(".statust1").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -322,10 +501,14 @@ $(".attackbtn").click(function () {
                 freezer.attack = freezer.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a2t").text(freezer.attack);
                 $(".d1t").text(goku.defense);
-                if (goku.defense < 0) {
-                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Goku!");
+                if (goku.defense <= 0) {
+                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Goku! Select Second Opponent");
+                    $(".gokup2").css("visibility","hidden");
                     $(".z1t").text("Defeated..!");
                     $(".statust1").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z3t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     freezer.defense = freezer.defense - goku.attack;
@@ -334,6 +517,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d2t").text(freezer.defense);
                         $(".statust2").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -349,10 +533,14 @@ $(".attackbtn").click(function () {
                 freezer.attack = freezer.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a2t").text(freezer.attack);
                 $(".d3t").text(piccolo.defense);
-                if (piccolo.defense < 0) {
-                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Piccolo!");
+                if (piccolo.defense <= 0) {
+                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Piccolo! Select Second Opponent");
+                    $(".piccolop2").css("visibility","hidden");
                     $(".z3t").text("Defeated..!");
                     $(".statust3").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     freezer.defense = freezer.defense - piccolo.attack;
@@ -361,6 +549,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d2t").text(freezer.defense);
                         $(".statust2").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -375,10 +564,14 @@ $(".attackbtn").click(function () {
                 freezer.attack = freezer.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a2t").text(freezer.attack);
                 $(".d4t").text(yamsha.defense);
-                if (yamsha.defense < 0) {
-                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Yamsha!");
+                if (yamsha.defense <= 0) {
+                    $(".instructions").text("Freezer Attack Increase to: " + freezer.attack + " and You just Defeat Yamsha! Select Second Opponent");
+                    $(".yamshap2").css("visibility","hidden");
                     $(".z4t").text("Defeated..!");
                     $(".statust4").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z3t").text("Click here to choose!");
                     paso++;
                 } else {
                     freezer.defense = freezer.defense - yamsha.attack;
@@ -387,6 +580,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d2t").text(freezer.defense);
                         $(".statust2").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -405,10 +599,14 @@ $(".attackbtn").click(function () {
                 piccolo.attack = piccolo.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a3t").text(piccolo.attack);
                 $(".d1t").text(goku.defense);
-                if (goku.defense < 0) {
-                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Goku!");
+                if (goku.defense <= 0) {
+                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Goku! Select Second Opponent");
+                    $(".gokup2").css("visibility","hidden");
                     $(".z1t").text("Defeated..!");
                     $(".statust1").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z2t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     piccolo.defense = piccolo.defense - goku.attack;
@@ -417,6 +615,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d3t").text(piccolo.defense);
                         $(".statust3").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -432,10 +631,14 @@ $(".attackbtn").click(function () {
                 piccolo.attack = piccolo.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a3t").text(piccolo.attack);
                 $(".d2t").text(freezer.defense);
-                if (freezer.defense < 0) {
-                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Freezer!");
+                if (freezer.defense <= 0) {
+                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Freezer! Select Second Opponent");
+                    $(".freezerp2").css("visibility","hidden");
                     $(".z2t").text("Defeated..!");
                     $(".statust2").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z4t").text("Click here to choose!");
                     paso++;
                 } else {
                     piccolo.defense = piccolo.defense - freezer.attack;
@@ -444,6 +647,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d3t").text(piccolo.defense);
                         $(".statust3").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -458,10 +662,14 @@ $(".attackbtn").click(function () {
                 piccolo.attack = piccolo.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a3t").text(piccolo.attack);
                 $(".d4t").text(yamsha.defense);
-                if (yamsha.defense < 0) {
-                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Yamsha!");
+                if (yamsha.defense <= 0) {
+                    $(".instructions").text("Piccolo Attack Increase to: " + piccolo.attack + " and You just Defeat Yamsha! Select Second Opponent");
+                    $(".yamshap2").css("visibility","hidden");
                     $(".z4t").text("Defeated..!");
                     $(".statust4").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z2t").text("Click here to choose!");
                     paso++;
                 } else {
                     piccolo.defense = piccolo.defense - yamsha.attack;
@@ -470,6 +678,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d3t").text(piccolo.defense);
                         $(".statust3").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -488,10 +697,14 @@ $(".attackbtn").click(function () {
                 yamsha.attack = yamsha.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a4t").text(yamsha.attack);
                 $(".d1t").text(goku.defense);
-                if (goku.defense < 0) {
-                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Goku!");
+                if (goku.defense <= 0) {
+                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Goku! Select Second Opponent");
+                    $(".gokup2").css("visibility","hidden");
                     $(".z1t").text("Defeated..!");
                     $(".statust1").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z2t").text("Click here to choose!");
+                    $(".z3t").text("Click here to choose!");
                     paso++;
                 } else {
                     yamsha.defense = yamsha.defense - goku.attack;
@@ -500,6 +713,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d4t").text(yamsha.defense);
                         $(".statust4").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -514,10 +728,14 @@ $(".attackbtn").click(function () {
                 yamsha.attack = yamsha.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a4t").text(yamsha.attack);
                 $(".d2t").text(freezer.defense);
-                if (freezer.defense < 0) {
-                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Freezer!");
+                if (freezer.defense <= 0) {
+                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Freezer! Select Second Opponent");
+                    $(".freezerp2").css("visibility","hidden");
                     $(".z2t").text("Defeated..!");
                     $(".statust2").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z3t").text("Click here to choose!");
                     paso++;
                 } else {
                     yamsha.defense = yamsha.defense - freezer.attack;
@@ -526,6 +744,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d4t").text(yamsha.defense);
                         $(".statust4").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden");
                         paso=1000;
 
                     }
@@ -540,10 +759,14 @@ $(".attackbtn").click(function () {
                 yamsha.attack = yamsha.attack + (Math.floor(Math.random() * 10) + 8);
                 $(".a4t").text(yamsha.attack);
                 $(".d3t").text(piccolo.defense);
-                if (piccolo.defense < 0) {
-                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Piccolo!");
+                if (piccolo.defense <= 0) {
+                    $(".instructions").text("Yamsha Attack Increase to: " + yamsha.attack + " and You just Defeat Piccolo! Select Second Opponent");
+                    $(".piccolop2").css("visibility","hidden");
                     $(".z3t").text("Defeated..!");
                     $(".statust3").css("background-color", "red");
+                    $(".attackbtn").css("visibility","hidden");
+                    $(".z1t").text("Click here to choose!");
+                    $(".z2t").text("Click here to choose!");
                     paso++;
                 } else {
                     yamsha.defense = yamsha.defense - piccolo.attack;
@@ -552,6 +775,7 @@ $(".attackbtn").click(function () {
                         $(".instructions").text("GAME OVER - You habe been defeated by "+vs.oponent1);
                         $(".d4t").text(yamsha.defense);
                         $(".statust4").css("background-color", "red");
+                        $(".attackbtn").css("visibility","hidden"); 
                         paso=1000;
 
                     }
@@ -567,7 +791,13 @@ $(".attackbtn").click(function () {
 
     }
 
+});
+
+$(".attackbtn").click(function () {
+    if (paso == 3) {
+     
+    
+    }
 
 
 });
-
