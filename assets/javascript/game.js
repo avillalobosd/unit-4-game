@@ -1940,8 +1940,19 @@ $(".attackbtn").click(function () {
 $(".finalbtn").click(function () {
 paso++;
 $(".attackbtn").css("visibility","visible"); 
-$(".finalbtn").css("visibility","hidden"); 
-
+if(vs.oponent3=="Goku"){
+    $(".gokup2").css("visibility","visible");
+}
+if(vs.oponent3=="Freezer"){
+    $(".freezerp2").css("visibility","visible");
+}
+if(vs.oponent3=="Piccolo"){
+    $(".piccolop2").css("visibility","visible");
+}
+if(vs.oponent3=="Yamsha"){
+    $(".yamshap2").css("visibility","visible");
+}
+$(".finalbtn").css("visibility","hidden");  
 
 });
 
